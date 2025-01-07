@@ -1,0 +1,193 @@
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/subsets/Pretendard-dynamic-subset.css');
+
+body {
+    margin: 0; /* 기본 여백 제거 */
+    display: flex; /* 중앙 정렬용 */
+    flex-direction: column;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+    text-align: center;
+    /* background-image: url('https://github.com/lukakas0213/Web-portfolio/blob/d19c9ca7bb00c1f024e20d86f7af628008ac6ccd/home%20bg.png?raw=true'); 배경 이미지 URL */
+    background: linear-gradient(to bottom,#aced98 20%, #ffffff 40%)
+}
+
+.home {
+    display: flex; /* Flexbox 활성화 */
+    flex-direction: column; /* 세로 방향 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: top; /* 세로 중앙 정렬 */
+    height: 100vh; /* 화면 전체 높이 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Thin.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Thin.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Thin.otf') format('opentype');
+    font-weight: normal;  /* Thin 폰트는 기본적으로 normal로 설정됩니다. */
+    font-style: normal;
+    font-display: swap;
+}
+
+.homeName {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 140px;     /* 고정된 폰트 크기 */
+    font-weight: 900;     /* Thin 폰트 두께를 400으로 설정 */
+    background: linear-gradient(to bottom, #40ab1f, #65db41);
+    -webkit-background-clip: text; /* 텍스트에 배경을 적용 */
+    color: transparent;
+    margin-top: 35px;
+    font-style: normal;
+    white-space: nowrap; /* 텍스트를 한 줄로 고정 */
+    overflow:visible;    /* 텍스트가 넘칠 경우 잘리게 설정 */
+}
+
+.homePics{
+    justify-content: center; /* 이미지가 가로로 중앙에 정렬되도록 */
+    align-items: center; /* 이미지가 세로로 중앙에 정렬되도록 */
+    position: relative; /* 자식 요소의 z-index 기준이 되는 부모 컨테이너 */
+
+}
+.LucasMemoji {
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-top: -40px;
+    margin-left: 70px;
+    width: 430px;
+    height: auto;
+    z-index: 1 !important; /* Clogo보다 앞에 배치 */
+    position: relative;
+}
+
+.Clogo {
+    position: absolute;
+    top: 110px;
+    left: 40px;
+    width: 120px;
+    height: auto;
+    z-index: 0 !important; /* LucasMemoji 뒤로 배치 */
+}
+
+.TensorflowLogo{
+    position:absolute;
+    top: 80px;
+    left: 450px;
+    width:140px;
+    height: auto;
+}
+
+.PythonLogo{
+    position:absolute;
+    top: 200px;
+    left: -220px;
+    width:140px;
+    height: auto;
+}
+
+.JSLogo{
+    position:absolute;
+    top: 240px;
+    left: -30px;
+    width:130px;
+    height: auto;
+}
+
+.JavaLogo{
+    position:absolute;
+    top: 260px;
+    left: 630px;
+    width:120px;
+    height: auto;
+    z-index: 3 !important;
+}
+
+/* Pulse Grow */
+@-webkit-keyframes hvr-pulse-grow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes hvr-pulse-grow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.hvr-pulse-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    animation: hvr-pulse-grow 0.9s linear infinite alternate; /* 애니메이션을 기본적으로 적용 */
+}
+
+
+/* 타이핑 효과 */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #000; /* 커서 효과 */
+    width: 0; /* 시작은 0 크기 */
+    animation: typing 3s steps(50) 1s forwards, blink 0.75s step-end infinite; /* 타이핑 애니메이션 후 깜빡임 애니메이션 반복 */
+}
+
+/* 깜빡이는 커서 */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.homeStatementBox{
+    position: relative;
+    margin-top: 30px;
+}
+.homeStatement {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 30px;
+    background: linear-gradient(90deg, #92A8D1, #FFB6C1, #FF7F50);
+    -webkit-background-clip: text; /* 텍스트에 배경을 적용 */
+    color: transparent;
+    margin-top: 0px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #FF7F50; /* 커서 효과 */
+    width: 0; /* 시작은 0 크기 */
+    animation: typing 3s steps(50) 1s forwards, blink 0.75s step-end infinite; /* 타이핑 애니메이션 후 깜빡임 애니메이션 반복 */
+}
+
+
+
+
+
+
+
+/* About Me */
+
+.aboutMe{    display: flex; /* 중앙 정렬용 */
+    height: 100vh;
+    /* background-image: url('https://github.com/lukakas0213/Web-portfolio/blob/fe397d1814b6782cf72736faa7b1d663a0149543/whiteboard.jpg?raw=true'); */
+}
+
+
+  
